@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+/*@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";*/
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+ }
+
+.mat-expansion-panel{
+	display: none;
+}
+.mat-expansion-panel {
+    height: 70px;
+   }
+
