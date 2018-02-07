@@ -1,3 +1,73 @@
-<p>
-  edit-contact works!
-</p>
+<app-common-header></app-common-header>
+<div *ngIf="contactItem" >
+<mat-card class="example-card" >
+
+  <mat-card-header>
+
+<button mdc-fab class="mdc-fab-delete-btn float-right" [mini]="false" [mdc-elevation]="12" (click)= deleteMe()>
+  <mdc-icon [fontSize]="24" >delete</mdc-icon>
+</button>
+
+    <mat-card-title mdc-typography-title >{{contactItem.Contacts[0].firstname}} {{contactItem.Contacts[0].LastName}}</mat-card-title>
+    <mat-card-subtitle mdc-typography-body1 >{{contactItem.Contacts[0].title}}</mat-card-subtitle>
+</mat-card-header>
+  <mat-card-content class="title">
+    <p mdc-typography-title >{{contactItem.CompanyName}}</p>
+    <div class="address">{{contactItem.StreetAddress}} {{contactItem.City}} {{contactItem.State}} {{contactItem.ZipCode}}</div>
+  </mat-card-content>
+</mat-card>
+<mat-card>
+    <mat-card-title mdc-typography-title >
+        <span class="item-name">Name:</span>
+        <span class="float-right item-value">{{contactItem.Contacts[0].firstname}} {{contactItem.Contacts[0].LastName}}</span>
+    </mat-card-title>
+</mat-card>
+<mat-card>
+    <mat-card-title mdc-typography-title >
+        <span class="item-name">City:</span>
+        <span class="float-right item-value">{{contactItem.Contacts[0].ContactCity}}</span>
+    </mat-card-title>
+</mat-card>
+</div>
+
+
+
+<!--
+
+				"CompanyID": 8037691,
+        "AccountId": "0",
+        "CompanyName": "NEW A&S Supply",
+        "StreetAddress": "583 School Street",
+        "StreetAddress2": "",
+        "City": "West New York",
+        "State": "NJ",
+        "Country": "",
+        "ZipCode": "07093",
+        "webSite": "",
+        "CreatedDate": "2015-12-10T08:43:57.313",
+        "Contacts[0]": [
+            {
+                "ContactId": 603180604,
+                "title": "President",
+                "firstname": "Jim",
+                "LastName": "Heady",
+                "ContactCity": "West New York",
+                "Contacts[0]tate": "NJ",
+                "ContactZip": "07093",
+                "PrimaryPhone": "642-584-7436",
+                "ext": "",
+                "MobilePhone": "",
+                "fax": "",
+                "email": "Jim@MyCompany.com",
+                "ContactAddress": "583 School Street",
+                "Contactaddress2": "",
+                "HomePhone": "",
+                "email2": "",
+                "dept": "",
+                "birthday": "Jan  1 1900 12:00AM"
+            }
+        ],
+        "status": "Not Defined",
+        "Type": "Miscellaneous"
+
+	-->

@@ -10,10 +10,29 @@ export class ApiService {
 
   constructor(private http: Http) { }
 
+  data;
+
   get(url:string){
-  	return this.request(url, RequestMethod.Get);
+    this.data = this.request(url, RequestMethod.Get);
+  	return this.data;
   }
 
+/*
+  getItem(url:string, id:number){
+    console.log('id '+id)
+    if(!this.data){
+    this.data = this.request(url, RequestMethod.Get);
+      return this.returnItem(this.data);
+    }else{
+      return this.returnItem(this.data);
+    }
+
+  }
+  returnItem(it){
+    console.log(it);
+    return it;
+  }
+  */
   post(url:string, body:Object){
   	return this.request(url, RequestMethod.Post);
   }

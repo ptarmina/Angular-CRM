@@ -1,0 +1,21 @@
+header {
+    width: 100%;
+    height: 90px;
+    background-color: #4d4842;
+
+}
+header .top {
+    width: 100%;
+    height: 20px;
+    background-color: #5d7a9a;
+}
+.logo img {
+	padding-top: 30px;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto auto;
+}
+.heaader-lg{
+    height: 200px;
+}

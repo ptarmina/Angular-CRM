@@ -6,20 +6,37 @@ import { ContactListComponent } from './contacts/contact-list/contact-list.compo
 import { AddContactComponent } from './contacts/add-contact/add-contact.component';
 import { EditContactComponent } from './contacts/edit-contact/edit-contact.component';
 import { ContactTableComponent } from './contacts/contact-table/contact-table.component';
-
+import { DashBoardComponent } from './dash-board/dash-board.component';
 
 const routes: Routes = [
+  /*
   {
     path: '',
-    redirectTo: '/contacts',
+    redirectTo: '/',
     pathMatch: 'full'
+  },
+  {
+    path: '',
+    component: DashBoardComponent
+  },
+  */
+
+
+  {
+    path: '',
+    redirectTo: '/dash-board',
+    pathMatch: 'full'
+  },
+  {
+    path: 'dash-board',
+    component: DashBoardComponent
   },
   {
     path: 'contacts',
     component: ContactListComponent
   },
   {
-    path: 'contact-detail',
+    path: 'contact-detail/:id',
     component: ContactDetailComponent
   },
   {
@@ -27,7 +44,7 @@ const routes: Routes = [
     component: AddContactComponent
   },
   {
-  path: 'edit-contact',
+  path: 'edit-contact/:id',
     component: EditContactComponent
   },
   {

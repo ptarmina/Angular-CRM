@@ -1,25 +1,13 @@
+<!--
 <app-contact
-    *ngFor = "let contactItem of contactItems"
+    *ngFor = "let contactItem of contactItems; index as i; odd as isOdd; even as isEven"
     [contactItem] = "contactItem"
 ></app-contact>
-
-
-
-<!--
-<div class="container-fluid">
-  <div class="row">
-    <div class="col">
-
-    </div>
-    <div class="col-6">
-<app-contact
-		*ngFor = "let contactItem of contactItems"
-	  [contactItem] = "contactItem"
-></app-contact>
-    </div>
-    <div class="col">
-
-    </div>
-  </div>
-</div>
 -->
+<app-add-button></app-add-button>
+<app-common-header></app-common-header>
+<app-contact
+    *ngFor = "let contactItem of contactItems;  index as i; let even = even; let odd = odd"
+    [ngClass]="{ odd: isOdd, even: isEven }"
+    [contactItem] = "contactItem"
+></app-contact>

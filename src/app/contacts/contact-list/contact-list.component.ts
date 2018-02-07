@@ -18,7 +18,7 @@ export class ContactListComponent implements OnInit {
 	constructor( public api: ApiService ) { }
 
   ngOnInit() {
-  	this.api.get('/tarmina')
+  	this.api.get('/ptarmina')
   	.subscribe ( data => this.contactItems = data);
   }
 

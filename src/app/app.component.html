@@ -1,10 +1,27 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<header style="text-align:center; color:#fff;">
+<!--
+<header ngClass.lt-md="{ heaader-lg }" style="text-align:center; color:#fff;">
 	<div class="top"></div>
 	<div class="header-content">
-	<i class="material-icons col">menu</i>
 	</div>
 </header>
+-->
 <section>
   <router-outlet></router-outlet>
 </section>
+
+
+<!--
+<div mdc-menu-anchor class="float-left">
+  <button mdc-button [raised]="true" (click)="menu.open()">
+    <i class="material-icons col">menu</i>
+  </button>
+  <mdc-menu #menu (select)="handleMenuSelect($event)" [anchorCorner]="bottom-start">
+    <mdc-menu-item id="0">Item 1</mdc-menu-item>
+    <mdc-menu-item id="1" [disabled]="true">Item 2</mdc-menu-item>
+    <mdc-menu-item id="2">Item 3</mdc-menu-item>
+    <mdc-menu-divider></mdc-menu-divider>
+    <mdc-menu-item id="3">Item 4</mdc-menu-item>
+  </mdc-menu>
+</div>
+-->
+	<!--<i class="material-icons col">menu</i>-->

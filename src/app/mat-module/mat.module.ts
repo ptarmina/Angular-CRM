@@ -4,11 +4,18 @@ import {
 				MatCardModule,
 				MatExpansionModule,
 				//MatTableDataSource,
-				MatTableModule
+				MatTableModule,
+        MatListModule,
+        //MatFormFieldModule,
+        //MatFormField,
+        //MatFormFieldControl
 				} from '@angular/material';
+
+
 import { CdkTableModule } from '@angular/cdk/table';
 
 @NgModule({
+
   imports:
   [
   	CommonModule,
@@ -16,6 +23,11 @@ import { CdkTableModule } from '@angular/cdk/table';
   	MatExpansionModule,
   	//MatTableDataSource,
   	MatTableModule,
+    MatListModule,
+    //MatFormFieldControl
+    //MatFormFieldModule,
+    //MatFormField,
+
   	CdkTableModule
 	],
   exports:
@@ -24,9 +36,14 @@ import { CdkTableModule } from '@angular/cdk/table';
   	MatExpansionModule,
   	//MatTableDataSource,
   	MatTableModule,
+    MatListModule,
+    //MatFormFieldModule,
+   // MatFormFieldControl,
+    //MatFormField,
   	CdkTableModule
 	],
 
   declarations: []
 })
 export class MatModule { }
+

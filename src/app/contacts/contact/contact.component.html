@@ -1,16 +1,38 @@
 
 
+<!--
+<div class="demo-container">
+	<h3>Start Graphic</h3>
+	<div fxLayout="row" fxLayoutWrap>
+		<button mdc-button (click)="startgraphic.border = !startgraphic.border">Border: {{startgraphic.border ? 'On' : 'Off'}}</button>
+		<button mdc-button (click)="startgraphic.dense = !startgraphic.dense">Dense: {{startgraphic.dense ? 'On' : 'Off'}}</button>
+		<button mdc-button (click)="startgraphic.interactive = !startgraphic.interactive">Interactive w/Ripple: {{startgraphic.interactive ? 'On' : 'Off'}}</button>
+	</div>
+
+
+	</div>
+-->
+
+		<mdc-list-item routerLink="/edit-contact/{{contactItem.CompanyID}}" >
+			<mdc-icon mdc-list-item-graphic>mode_edit</mdc-icon>{{contactItem.CompanyName}}
+			<mdc-icon mdc-list-item-meta>info</mdc-icon>
+		</mdc-list-item>
+
+
+
+
+<!--
 	<mat-card>
 		<div class="container">
 			<div class="row">
-
 				<i style="font-size: 40px !important; color:#757575" class="material-icons col">contacts</i>
-				<div class="col_md">{{ contactItem.CompanyName }}</div>
-				<i class="material-icons col">edit</i>
-
+				{{contactItem.CompanyName}}
+				<a routerLink="/edit-contact/{{contactItem.CompanyID}}"> <i class="material-icons col" >edit</i> </a>
 		</div>
 		</div>
 	</mat-card>
+-->
+<!--<div class="col_md">{{ contactItem.CompanyID }}</div>-->
 
 <!--
 <mat-accordion>
