@@ -51,12 +51,7 @@
 	      <input type="text" class="form-control" placeholder="Created Date" formControlName="CreatedDate">
 	    </div>
 
-  </div>
 
-    <!-- start contact panel -->
-    <p>Contact Data</p>
-
-    <div formGroupName="Contacts">
     	<!--
       <div *ngFor="let contact of contactForm.controls.contacts.controls; let i=index" class="panel panel-default">
 
@@ -64,7 +59,7 @@
     		<div class="panel-body" [formGroupName]="i">
 
     		-->
-    			<!-- start contact items -->
+    			<!-- start contact items
 
 		      <div>
 		         <input type="text" class="form-control"  placeholder="Contact Id" formControlName="ContactId">
@@ -137,7 +132,7 @@
 		      <div>
 		         <input type="text" class="form-control"  placeholder="birthday" formControlName="birthday">
 		      </div>
-		      <!-- end contact items -->
+		      end contact items -->
 		    <!--
 		    </div>
 		    </div>
@@ -153,7 +148,7 @@
 
 
 <div>
-  <pre>form value: <br>{{contactForm.value | json}}</pre>
+  <pre>form value: <br>{{contactForm.value }}</pre>
 </div>
 
 

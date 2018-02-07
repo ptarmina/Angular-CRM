@@ -1,13 +1,13 @@
-<!--
-<app-contact
-    *ngFor = "let contactItem of contactItems; index as i; odd as isOdd; even as isEven"
-    [contactItem] = "contactItem"
-></app-contact>
--->
-<app-add-button></app-add-button>
+<app-add-button ></app-add-button>
+<!--<app-back-button ></app-back-button>-->
 <app-common-header></app-common-header>
+<div fxShow fxHide.gt-xs>
 <app-contact
     *ngFor = "let contactItem of contactItems;  index as i; let even = even; let odd = odd"
     [ngClass]="{ odd: isOdd, even: isEven }"
     [contactItem] = "contactItem"
 ></app-contact>
+</div>
+<div fxHide fxShow.gt-xs>
+	<app-contact-table></app-contact-table>
+</div>

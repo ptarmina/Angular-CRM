@@ -1,13 +1,14 @@
 <app-common-header></app-common-header>
-<div *ngIf="contactItem" >
+
+<div *ngIf="contactItem">
 <mat-card class="example-card" >
 
   <mat-card-header>
-
-<button mdc-fab class="mdc-fab-delete-btn float-right" [mini]="false" [mdc-elevation]="12" (click)= deleteMe()>
-  <mdc-icon [fontSize]="24" >delete</mdc-icon>
+<div class="flex-container">
+<button mdc-fab class="mdc-fab-delete-btn" [mini]="false" [mdc-elevation]="12" (click)= deleteMe()>
+  <mdc-icon [fontSize]="20" >delete</mdc-icon>
 </button>
-
+</div>
     <mat-card-title mdc-typography-title >{{contactItem.Contacts[0].firstname}} {{contactItem.Contacts[0].LastName}}</mat-card-title>
     <mat-card-subtitle mdc-typography-body1 >{{contactItem.Contacts[0].title}}</mat-card-subtitle>
 </mat-card-header>
@@ -24,8 +25,50 @@
 </mat-card>
 <mat-card>
     <mat-card-title mdc-typography-title >
+        <span class="item-name">Address:</span>
+        <span class="float-right item-value">{{contactItem.Contacts[0].ContactAddress}}</span>
+    </mat-card-title>
+</mat-card>
+<mat-card>
+    <mat-card-title mdc-typography-title >
         <span class="item-name">City:</span>
         <span class="float-right item-value">{{contactItem.Contacts[0].ContactCity}}</span>
+    </mat-card-title>
+</mat-card>
+<mat-card>
+    <mat-card-title mdc-typography-title >
+        <span class="item-name">State:</span>
+        <span class="float-right item-value">{{contactItem.Contacts[0].ContactState}}</span>
+    </mat-card-title>
+</mat-card>
+<mat-card>
+    <mat-card-title mdc-typography-title >
+        <span class="item-name">Zip:</span>
+        <span class="float-right item-value">{{contactItem.Contacts[0].ContactZip}}</span>
+    </mat-card-title>
+</mat-card>
+<mat-card>
+    <mat-card-title mdc-typography-title >
+        <span class="item-name">Email:</span>
+        <span class="float-right item-value">{{contactItem.Contacts[0].email}}</span>
+    </mat-card-title>
+</mat-card>
+<mat-card>
+    <mat-card-title mdc-typography-title >
+        <span class="item-name">Primary Phone:</span>
+        <span class="float-right item-value">{{contactItem.Contacts[0].PrimaryPhone}}</span>
+    </mat-card-title>
+</mat-card>
+<mat-card>
+    <mat-card-title mdc-typography-title >
+        <span class="item-name">Mobile Phone:</span>
+        <span class="float-right item-value">{{contactItem.Contacts[0].MobilePhone}}</span>
+    </mat-card-title>
+</mat-card>
+<mat-card>
+    <mat-card-title mdc-typography-title >
+        <span class="item-name">Birthday:</span>
+        <span class="float-right item-value">{{contactItem.Contacts[0].birthday}}</span>
     </mat-card-title>
 </mat-card>
 </div>

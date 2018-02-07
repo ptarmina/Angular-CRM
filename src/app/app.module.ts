@@ -11,7 +11,11 @@ import { ContactComponent } from './contacts/contact/contact.component';
 import { ContactListComponent } from './contacts/contact-list/contact-list.component';
 import { AddContactComponent } from './contacts/add-contact/add-contact.component';
 import { ApiService } from './shared/api.service'
-import { AgGridModule } from 'ag-grid-angular';
+
+//import { AgGridModule } from 'ag-grid-angular/main';
+//import { MyGridApplicationComponent } from './my-grid-application/my-grid-application.component'
+
+
 import { ContactTableComponent } from './contacts/contact-table/contact-table.component';
 import { EditContactComponent } from './contacts/edit-contact/edit-contact.component';
 import { ContactDetailComponent } from './contacts/contact-detail/contact-detail.component';
@@ -29,6 +33,9 @@ import { MdcTextFieldModule } from '@angular-mdc/web';
 
 import { CommonHeaderComponent } from './common-header/common-header.component';
 import { AddButtonComponent } from './add-button/add-button.component';
+import { BackButtonComponent } from './back-button/back-button.component';
+
+
 
 @NgModule({
   declarations: [
@@ -41,8 +48,9 @@ import { AddButtonComponent } from './add-button/add-button.component';
     ContactDetailComponent,
     DashBoardComponent,
     CommonHeaderComponent,
-
-    AddButtonComponent
+    //MyGridApplicationComponent,
+    AddButtonComponent,
+    BackButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +61,7 @@ import { AddButtonComponent } from './add-button/add-button.component';
     HttpModule,
     AppRoutingModule,
     MatModule,
-    AgGridModule,
+    //AgGridModule,
     FlexLayoutModule,
     MdcButtonModule,
     MdcFabModule,

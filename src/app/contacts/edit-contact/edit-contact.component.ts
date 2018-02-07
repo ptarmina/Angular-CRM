@@ -15,7 +15,7 @@ export class EditContactComponent implements OnInit {
   constructor(private route: ActivatedRoute, public api: ApiService, private router: Router) { }
 
 contactId;
-//contactItem:object;
+contactItem;
 /*
 	contactItem = [
 		{
@@ -92,7 +92,7 @@ goBack(){
 
 
   deleteMe(){
-    this.api.delete('/ptarmina/8589253')
+    this.api.delete('ptarmina/'+this.contactId)
     .subscribe(data => {
       this.goBack()
    });

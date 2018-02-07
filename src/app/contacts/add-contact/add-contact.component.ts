@@ -43,9 +43,9 @@ export class AddContactComponent implements OnInit {
   createForm() {
     this.contactForm = this.fb.group({
 
-        CompanyID: ['7654321'],
+        CompanyID: ['01010101'],
         AccountId: ['999999'],
-        CompanyName: ['My Company'],
+        CompanyName: ['TEST PUT'],
         StreetAddress: ['123 state st'],
         StreetAddress2: ['321 state st'],
         City: ['SLC'],
@@ -54,10 +54,38 @@ export class AddContactComponent implements OnInit {
         ZipCode: ['00000'],
         webSite: ['lalala.com'],
         CreatedDate: ['asdasdasd'],
+        Contacts:[
 
-      	Contacts: this.fb.group(
-      		this.initContact(),
-      		),
+      {
+
+            ContactId: '123456789',
+            title: 'VP',
+            firstname: 'Rico',
+            LastName: 'Suave',
+            ContactCity: 'SLC',
+            ContactState: 'Ut',
+            ContactZip: '00000',
+            PrimaryPhone: '111-222-3333',
+            ext: '666',
+            MobilePhone: '999-888-7777',
+            fax: '',
+            email: 'rico@suave.com',
+            ContactAddress: '123 main',
+            Contactaddress2: '321 main',
+            HomePhone: '555-666-7777',
+            email2: '',
+            dept: 'sales',
+            birthday: ''
+
+        }
+        ]
+        /*
+      	Contacts:this.fb.group(
+
+      		this.initContact()
+
+          )
+         */
 
     /*
 		Contacts: this.fb.group(
@@ -87,43 +115,44 @@ export class AddContactComponent implements OnInit {
   }
 
 initContact() {
-        // initialize our contact
-        var obj = {ContactId:'123456789'};
 
-        console.log(obj)
-        return ({
+        return (
 
-            ContactId: ['123456789'],
-            title: ['VP'],
-            firstname: ['Rico'],
-            LastName: ['Suave'],
-            ContactCity: ['SLC'],
-            ContactState: ['Ut'],
-            ContactZip: ['00000'],
-            PrimaryPhone: ['111-222-3333'],
-            ext: ['666'],
-            MobilePhone: ['999-888-7777'],
-            fax: [''],
-            email: ['rico@suave.com'],
-            ContactAddress: ['123 main'],
-            Contactaddress2: ['321 main'],
-            HomePhone: ['555-666-7777'],
-            email2: [''],
-            dept: ['sales'],
-            birthday: ['']
+        {
 
-        });
+            ContactId: '123456789',
+            title: 'VP',
+            firstname: 'Rico',
+            LastName: 'Suave',
+            ContactCity: 'SLC',
+            ContactState: 'Ut',
+            ContactZip: '00000',
+            PrimaryPhone: '111-222-3333',
+            ext: '666',
+            MobilePhone: '999-888-7777',
+            fax: '',
+            email: 'rico@suave.com',
+            ContactAddress: '123 main',
+            Contactaddress2: '321 main',
+            HomePhone: '555-666-7777',
+            email2: '',
+            dept: 'sales',
+            birthday: ''
+
+        }
+
+        );
     }
 
-onSubmit(data) {
-	console.log(data)
-
-    };
 
 
+onSubmit(obj) {
+  this.api.put('/ptarmina',obj)
+  .subscribe ( data => {
 
+  });
 
-}
+};
 
 
 
@@ -171,4 +200,4 @@ onSubmit(data) {
 
 */
 
-
+}
