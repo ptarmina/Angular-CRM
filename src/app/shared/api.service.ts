@@ -13,26 +13,18 @@ export class ApiService {
   data;
 
   get(url:string){
-    this.data = this.request(url, RequestMethod.Get);
-  	return this.data;
-  }
-
-/*
-  getItem(url:string, id:number){
-    console.log('id '+id)
-    if(!this.data){
-    this.data = this.request(url, RequestMethod.Get);
-      return this.returnItem(this.data);
+    if(this.data){
+      console.log("Stored data");
+      return this.data
     }else{
-      return this.returnItem(this.data);
+      console.log("New data");
+      return this.getIt(url);
     }
-
   }
-  returnItem(it){
-    console.log(it);
-    return it;
+  getIt(url:string){
+    this.data = this.request(url, RequestMethod.Get);
+    return  this.data;
   }
-  */
   post(url:string, body:Object){
   	return this.request(url, RequestMethod.Post);
   }
@@ -40,11 +32,9 @@ export class ApiService {
 	put(url:string, body:Object){
   	return this.request(url, RequestMethod.Put);
   }
-
   delete(url:string){
   	return this.request(url, RequestMethod.Delete);
   }
-
   request(url:string, method:RequestMethod, body?:Object){
 
   	const headers = new Headers();
@@ -61,12 +51,7 @@ export class ApiService {
   	}
 
  		const request = new Request(requestOptions);
-
  			return this.http.request(request)
  			.map((res: Response) => res.json());
-
   }
-
-
-
 }

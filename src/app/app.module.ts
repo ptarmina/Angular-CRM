@@ -12,10 +12,6 @@ import { ContactListComponent } from './contacts/contact-list/contact-list.compo
 import { AddContactComponent } from './contacts/add-contact/add-contact.component';
 import { ApiService } from './shared/api.service'
 
-//import { AgGridModule } from 'ag-grid-angular/main';
-//import { MyGridApplicationComponent } from './my-grid-application/my-grid-application.component'
-
-
 import { ContactTableComponent } from './contacts/contact-table/contact-table.component';
 import { EditContactComponent } from './contacts/edit-contact/edit-contact.component';
 import { ContactDetailComponent } from './contacts/contact-detail/contact-detail.component';
@@ -48,7 +44,6 @@ import { BackButtonComponent } from './back-button/back-button.component';
     ContactDetailComponent,
     DashBoardComponent,
     CommonHeaderComponent,
-    //MyGridApplicationComponent,
     AddButtonComponent,
     BackButtonComponent,
   ],
@@ -61,7 +56,6 @@ import { BackButtonComponent } from './back-button/back-button.component';
     HttpModule,
     AppRoutingModule,
     MatModule,
-    //AgGridModule,
     FlexLayoutModule,
     MdcButtonModule,
     MdcFabModule,

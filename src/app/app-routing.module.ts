@@ -9,19 +9,6 @@ import { ContactTableComponent } from './contacts/contact-table/contact-table.co
 import { DashBoardComponent } from './dash-board/dash-board.component';
 
 const routes: Routes = [
-  /*
-  {
-    path: '',
-    redirectTo: '/',
-    pathMatch: 'full'
-  },
-  {
-    path: '',
-    component: DashBoardComponent
-  },
-  */
-
-
   {
     path: '',
     redirectTo: '/dash-board',

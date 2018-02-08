@@ -11,8 +11,10 @@ import {
         //MatFormFieldControl
 				} from '@angular/material';
 
-
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field'
 import { CdkTableModule } from '@angular/cdk/table';
+
 
 @NgModule({
 
@@ -24,6 +26,8 @@ import { CdkTableModule } from '@angular/cdk/table';
   	//MatTableDataSource,
   	MatTableModule,
     MatListModule,
+    MatInputModule,
+    MatFormFieldModule,
     //MatFormFieldControl
     //MatFormFieldModule,
     //MatFormField,
@@ -37,6 +41,8 @@ import { CdkTableModule } from '@angular/cdk/table';
   	//MatTableDataSource,
   	MatTableModule,
     MatListModule,
+    MatInputModule,
+    MatFormFieldModule,
     //MatFormFieldModule,
    // MatFormFieldControl,
     //MatFormField,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../shared/api.service'
 
 @Component({
   selector: 'app-dash-board',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashBoardComponent implements OnInit {
 
-  constructor() { }
+  constructor( public api: ApiService ) { }
+  isResults = false;
 
   ngOnInit() {
+
+  	this.api.get('/ptarmina')
+  	.subscribe ( data => {
+      this.isResults = true;
+  	});
   }
 
 }

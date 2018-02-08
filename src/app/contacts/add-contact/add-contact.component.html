@@ -1,16 +1,27 @@
 <app-common-header></app-common-header>
 
-<div class="form-container" >
-	<p>Company Data</p>
-  <form  [formGroup]="contactForm" (submit)="onSubmit(contactForm.value)"  >
-  	<!-- start company panel -->
-  	<div>
-  		<!-- start company items
+<!--
 
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput value="Sushi">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Leave a comment"></textarea>
+  </mat-form-field>
+
+</form>
+-->
+
+
+<!--
+<div class="form-container" >
+  <form  [formGroup]="contactForm" (submit)="onSubmit(contactForm.value)"  >
 	    <div>
 	      <input type="text" class="form-control" placeholder="Company Id" formControlName="CompanyId">
 	    </div>
- -->
+
 	    <div>
 	      <input type="text" class="form-control" placeholder="Account Id" formControlName="AccountId">
 	    </div>
@@ -51,143 +62,82 @@
 	      <input type="text" class="form-control" placeholder="Created Date" formControlName="CreatedDate">
 	    </div>
 
+      <div>
+         <input type="text" class="form-control"  placeholder="Contact Id" formControlName="ContactId">
+      </div>
 
-    	<!--
-      <div *ngFor="let contact of contactForm.controls.contacts.controls; let i=index" class="panel panel-default">
+      <div>
+         <input type="text" class="form-control"  placeholder="title" formControlName="title">
+      </div>
 
+      <div>
+         <input type="text" class="form-control"  placeholder="first name" formControlName="firstname">
+      </div>
 
-    		<div class="panel-body" [formGroupName]="i">
+      <div>
+         <input type="text" class="form-control"  placeholder="Last Name" formControlName="LastName">
+      </div>
 
-    		-->
-    			<!-- start contact items
+      <div>
+         <input type="text" class="form-control"  placeholder="Contact City" formControlName="ContactCity">
+      </div>
 
-		      <div>
-		         <input type="text" class="form-control"  placeholder="Contact Id" formControlName="ContactId">
-		      </div>
+      <div>
+         <input type="text" class="form-control"  placeholder="Contact State" formControlName="ContactState">
+      </div>
 
-		      <div>
-		         <input type="text" class="form-control"  placeholder="title" formControlName="title">
-		      </div>
+      <div>
+         <input type="text" class="form-control"  placeholder="Contact Zip" formControlName="ContactZip">
+      </div>
 
-		      <div>
-		         <input type="text" class="form-control"  placeholder="first name" formControlName="firstname">
-		      </div>
+      <div>
+         <input type="text" class="form-control"  placeholder="Primary Phone" formControlName="PrimaryPhone">
+      </div>
 
-		      <div>
-		         <input type="text" class="form-control"  placeholder="Last Name" formControlName="LastName">
-		      </div>
+      <div>
+         <input type="text" class="form-control"  placeholder="ext" formControlName="ext">
+      </div>
 
-		      <div>
-		         <input type="text" class="form-control"  placeholder="Contact City" formControlName="ContactCity">
-		      </div>
+      <div>
+         <input type="text" class="form-control"  placeholder="Mobile Phone" formControlName="MobilePhone">
+      </div>
 
-		      <div>
-		         <input type="text" class="form-control"  placeholder="Contact State" formControlName="ContactState">
-		      </div>
+      <div>
+         <input type="text" class="form-control"  placeholder="fax" formControlName="fax">
+      </div>
 
-		      <div>
-		         <input type="text" class="form-control"  placeholder="Contact Zip" formControlName="ContactZip">
-		      </div>
+      <div>
+         <input type="text" class="form-control"  placeholder="email" formControlName="email">
+      </div>
 
-		      <div>
-		         <input type="text" class="form-control"  placeholder="Primary Phone" formControlName="PrimaryPhone">
-		      </div>
+      <div>
+         <input type="text" class="form-control"  placeholder="Contact Address" formControlName="ContactAddress">
+      </div>
 
-		      <div>
-		         <input type="text" class="form-control"  placeholder="ext" formControlName="ext">
-		      </div>
+      <div>
+         <input type="text" class="form-control"  placeholder="Contact address2" formControlName="Contactaddress2">
+      </div>
 
-		      <div>
-		         <input type="text" class="form-control"  placeholder="Mobile Phone" formControlName="MobilePhone">
-		      </div>
+      <div>
+         <input type="text" class="form-control"  placeholder="Home Phone" formControlName="HomePhone">
+      </div>
 
-		      <div>
-		         <input type="text" class="form-control"  placeholder="fax" formControlName="fax">
-		      </div>
+      <div>
+         <input type="text" class="form-control"  placeholder="email2" formControlName="email2">
+      </div>
 
-		      <div>
-		         <input type="text" class="form-control"  placeholder="email" formControlName="email">
-		      </div>
+      <div>
+         <input type="text" class="form-control"  placeholder="dept" formControlName="dept">
+      </div>
 
-		      <div>
-		         <input type="text" class="form-control"  placeholder="Contact Address" formControlName="ContactAddress">
-		      </div>
-
-		      <div>
-		         <input type="text" class="form-control"  placeholder="Contact address2" formControlName="Contactaddress2">
-		      </div>
-
-		      <div>
-		         <input type="text" class="form-control"  placeholder="Home Phone" formControlName="HomePhone">
-		      </div>
-
-		      <div>
-		         <input type="text" class="form-control"  placeholder="email2" formControlName="email2">
-		      </div>
-
-		      <div>
-		         <input type="text" class="form-control"  placeholder="dept" formControlName="dept">
-		      </div>
-
-		      <div>
-		         <input type="text" class="form-control"  placeholder="birthday" formControlName="birthday">
-		      </div>
-		      end contact items -->
-		    <!--
-		    </div>
-		    </div>
-		  -->
-	      </div>
-
-
-    <br />
-    <button type="submit">Submit</button>
+      <div>
+         <input type="text" class="form-control"  placeholder="birthday" formControlName="birthday">
+      </div>
+     <button type="submit" [disabled]="!form.valid">Submit</button>
   </form>
 </div>
-
-
-
-<div>
-  <pre>form value: <br>{{contactForm.value }}</pre>
-</div>
-
-
-<!--
-{
-        "CompanyID"
-        "AccountId"
-        "CompanyName"
-        "StreetAddress"
-        "StreetAddress2"
-        "City"
-        "State"
-        "Country"
-        "ZipCode"
-        "webSite"
-        "CreatedDate"
-
-        "Contacts"
-
-                "ContactId"
-                "title"
-                "firstname"
-                "LastName"
-                "ContactCity"
-                "ContactState"
-                "ContactZip"
-                "PrimaryPhone"
-                "ext"
-                "MobilePhone"
-                "fax"
-                "email"
-                "ContactAddress"
-                "Contactaddress2"
-                "HomePhone"
-                "email2"
-                "dept"
-                "birthday"
-            }
-        ],
-        "status": "Not Defined",
-        "Type": "Miscellaneous"
 -->
+
+
+
+

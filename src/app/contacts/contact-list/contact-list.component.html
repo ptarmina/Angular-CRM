@@ -1,13 +1,15 @@
 <app-add-button ></app-add-button>
 <!--<app-back-button ></app-back-button>-->
-<app-common-header></app-common-header>
-<div fxShow fxHide.gt-xs>
-<app-contact
-    *ngFor = "let contactItem of contactItems;  index as i; let even = even; let odd = odd"
-    [ngClass]="{ odd: isOdd, even: isEven }"
-    [contactItem] = "contactItem"
-></app-contact>
+
+<app-common-header *ngIf="	isResults" ></app-common-header>
+<div *ngIf="isResults">
+<div  fxHide fxShow.xs="true">
+	<app-contact
+	    *ngFor = "let contactItem of (contactItems ? contactItems : [])"
+	    [contactItem] = "contactItem"
+	></app-contact>
 </div>
-<div fxHide fxShow.gt-xs>
+</div>
+<div fxShow fxHide.lt-sm="true">
 	<app-contact-table></app-contact-table>
 </div>

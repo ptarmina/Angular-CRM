@@ -13,13 +13,26 @@ import { ApiService } from '../../shared/api.service'
 export class ContactListComponent implements OnInit {
 
 	contactItems;
-
+  isResults = false;
 
 	constructor( public api: ApiService ) { }
-
   ngOnInit() {
+
   	this.api.get('/ptarmina')
-  	.subscribe ( data => this.contactItems = data);
+  	.subscribe ( data => {
+      this.isResults = true;
+      this.cleanData(data)
+    });
+  }
+
+  cleanData(obj){
+    for (var i=obj.length;i--;){
+
+      if (obj[i]===null) {
+        obj.splice(i,1)
+      };
+    }
+    this.contactItems = obj
   }
 
 }

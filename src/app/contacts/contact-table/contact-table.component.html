@@ -1,17 +1,5 @@
 <div class="example-container mat-elevation-z8">
   <mat-table #table [dataSource]="dataSource">
-
-<!-- Created Column -->
-    <ng-container matColumnDef="Created">
-      <mat-header-cell *matHeaderCellDef
-                       mat-sort-header
-                       disableClear="true">
-        Created
-      </mat-header-cell>
-      <mat-cell *matCellDef="let row">{{ row.CreatedDate | date }}</mat-cell>
-    </ng-container>
-
-
     <ng-container matColumnDef="CompanyName" >
       <mat-header-cell *matHeaderCellDef> Company </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.CompanyName}} </mat-cell>
@@ -20,6 +8,14 @@
     <ng-container matColumnDef="Name" >
       <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.Contacts[0].firstname}} {{row.Contacts[0].LastName}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Button" >
+      <mat-header-cell *matHeaderCellDef> Detail </mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        <button  mdc-fab  class="mdc-fab-detail" (click)="getDetail(row.CompanyID)">
+        <mdc-icon [fontSize]="18" >info</mdc-icon>
+      </button></mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

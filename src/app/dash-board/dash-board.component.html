@@ -4,71 +4,13 @@
 	</div>
 </header>
 
-
 <div class="wrapper" >
-<div class="container">
-<button mdc-fab class="mdc-fab-arrow-btn" [mini]="false" [mdc-elevation]="12" routerLink="/contacts">
-  <mdc-icon [fontSize]="52" >forward</mdc-icon>
-</button>
-<div>
+  <div class="container">
+  <div class="loader" *ngIf="!isResults">
+    Loading...
+  </div>
+  <button *ngIf="isResults" mdc-fab class="mdc-fab-arrow-btn" [mini]="false" [mdc-elevation]="12" routerLink="/contacts">
+    <mdc-icon [fontSize]="52" >forward</mdc-icon>
+  </button>
+  <div>
 </div>
-
-
-
-
-<!--
-<div fxShow fxHide.md="true">
-	<p>
-	  dash-board works!`
-	</p>
-</div>
-
- <div>
-      <div class="content"
-           fxLayout="row"
-           fxLayout.lt-md="column"
-           fxFlexFill >
-
-          <div fxFlex="50" class="sec1" >
-              1
-          </div>
-          <div fxFlex="50" class="sec2" >
-              2
-          </div>
-      </div>
-      <div class="content"
-           fxLayout="row"
-           fxLayout.lt-md="column"
-           fxFlexFill >
-
-          <div fxFlex="50" class="sec1" >
-              3
-          </div>
-          <div fxFlex="50" class="sec2" >
-              4
-          </div>
-      </div>
-</div>
--->
-<!--
-    <div class="bounds">
-
-      <div class="content"
-           fxLayout="row"
-           fxLayout.lt-md="column"
-           fxFlexFill >
-
-          <div fxFlex="33.33" class="sec1" >
-              first-section
-          </div>
-          <div fxFlex="33.33" class="sec2" >
-              second-section
-          </div>
-          <div fxFlex="33.33" class="sec3" >
-              third-section
-          </div>
-
-      </div>
-
-    </div>
-    -->
