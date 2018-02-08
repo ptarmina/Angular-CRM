@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ApiService } from '../../shared/api.service'
-import { ContactComponent } from '../contact/contact.component';
 import { RouterModule, Routes, Router } from '@angular/router';
+
+import { ApiService } from '../../shared/api.service'
+import { UtilitiesService } from '../../shared/utilities.service'
+
+import { ContactComponent } from '../contact/contact.component';
+
 
 @Component({
   selector: 'app-edit-contact',
@@ -11,7 +15,7 @@ import { RouterModule, Routes, Router } from '@angular/router';
 })
 export class EditContactComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, public api: ApiService, private router: Router) { }
+  constructor(private route: ActivatedRoute, public api: ApiService, private router: Router, public utility:UtilitiesService ) { }
 
 contactId;
 contactItem;
@@ -19,6 +23,7 @@ contactItem;
 ngOnInit() {
   this.route.params.subscribe( params => {
     (params['id'])
+    //console.log( (params['id']) )
     this.setId((params['id']))
   });
 }
@@ -30,28 +35,9 @@ setId(id){
 getItems(){
     this.api.get('/ptarmina')
     .subscribe ( data => {
-      this.getItem(data);
+      this.contactItem = this.utility.getItemById(data, this.contactId);
     });
 }
-
-  cleanData(obj){
-    for (var i=obj.length;i--;){
-      if (obj[i]===null) {
-        obj.splice(i,1)
-      };
-    }
-    this.getItem = (obj);
-  }
-
-getItem(obj){
-  for (var value of obj) {
-    if(value.CompanyID == this.contactId){
-        this.contactItem = value;
-        return
-    };
-  }
-}
-
 goBack(){
   this.router.navigateByUrl('/contacts');
 }
@@ -62,6 +48,7 @@ deleteMe(){
       this.goBack()
    });
 }
+
 
 }
 

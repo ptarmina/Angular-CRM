@@ -5,6 +5,7 @@ import { MatTableDataSource } from '@angular/material/table'
 import {MatPaginator, MatSort} from '@angular/material';
 
 import { ApiService } from '../../shared/api.service'
+import { UtilitiesService } from '../../shared/utilities.service'
 import {Router} from '@angular/router';
 
 @Component({
@@ -14,7 +15,7 @@ import {Router} from '@angular/router';
 })
 export class ContactTableComponent implements OnInit {
 
-  constructor( public api: ApiService, private router:Router ) { }
+  constructor( public api: ApiService, private router:Router, public utility:UtilitiesService  ) { }
 
   displayedColumns = ['CompanyName','Name', 'Button'];
   dataSource = new MatTableDataSource();
@@ -27,23 +28,11 @@ export class ContactTableComponent implements OnInit {
   ngOnInit() {
     this.api.get('ptarmina')
     .subscribe ( data => {
-      this.cleanData(data)
-
+      this.dataSource.data = this.utility.cleanData(data);
     });
   }
 
-  cleanData(obj){
-    for (var i=obj.length;i--;){
-      if (obj[i]===null) {
-        obj.splice(i,1)
-      };
-    }
-    this.dataSource.data = obj;
-  }
-
   getDetail(id){
-    console.log("getDetail "+id);
     this.router.navigate(['/edit-contact/'+id]);
-
   }
 }

@@ -11,6 +11,7 @@ import { ContactComponent } from './contacts/contact/contact.component';
 import { ContactListComponent } from './contacts/contact-list/contact-list.component';
 import { AddContactComponent } from './contacts/add-contact/add-contact.component';
 import { ApiService } from './shared/api.service'
+import { UtilitiesService } from './shared/utilities.service'
 
 import { ContactTableComponent } from './contacts/contact-table/contact-table.component';
 import { EditContactComponent } from './contacts/edit-contact/edit-contact.component';
@@ -68,7 +69,8 @@ import { BackButtonComponent } from './back-button/back-button.component';
 
   ],
   providers: [
-    ApiService
+    ApiService,
+    UtilitiesService
   ],
   bootstrap: [
     AppComponent

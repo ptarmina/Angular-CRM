@@ -13,6 +13,8 @@ export class ApiService {
   data;
 
   get(url:string){
+  	//return this.request(url, RequestMethod.Get);
+
     if(this.data){
       console.log("Stored data");
       return this.data
@@ -20,21 +22,24 @@ export class ApiService {
       console.log("New data");
       return this.getIt(url);
     }
+
   }
   getIt(url:string){
     this.data = this.request(url, RequestMethod.Get);
     return  this.data;
   }
+
   post(url:string, body:Object){
   	return this.request(url, RequestMethod.Post);
   }
 
 	put(url:string, body:Object){
-  	return this.request(url, RequestMethod.Put);
+  	return this.request(url, RequestMethod.Put, body);
   }
   delete(url:string){
   	return this.request(url, RequestMethod.Delete);
   }
+
   request(url:string, method:RequestMethod, body?:Object){
 
   	const headers = new Headers();
@@ -52,6 +57,11 @@ export class ApiService {
 
  		const request = new Request(requestOptions);
  			return this.http.request(request)
- 			.map((res: Response) => res.json());
-  }
+ 			.map((res: Response) => res.json()
+
+     )};
+
 }
+
+
+

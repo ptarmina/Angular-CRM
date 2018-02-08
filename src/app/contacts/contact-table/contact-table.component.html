@@ -13,9 +13,10 @@
     <ng-container matColumnDef="Button" >
       <mat-header-cell *matHeaderCellDef> Detail </mat-header-cell>
       <mat-cell *matCellDef="let row">
-        <button  mdc-fab  class="mdc-fab-detail" (click)="getDetail(row.CompanyID)">
+        <button  mdc-fab  *ngIf="row.CompanyID" class="mdc-fab-detail" (click)="getDetail(row.CompanyID)">
         <mdc-icon [fontSize]="18" >info</mdc-icon>
-      </button></mat-cell>
+      </button>
+      </mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

@@ -48,7 +48,8 @@
     align-items: center;
     padding: 0 24px;
     box-sizing: border-box;
-    background-color: #5d7a9a;
+    /*background-color: #5d7a9a;*/
+    background-color: #b7b7af;
     color:#fff;
 }
 .mat-row {

@@ -15,7 +15,9 @@ export class DashBoardComponent implements OnInit {
 
   	this.api.get('/ptarmina')
   	.subscribe ( data => {
+
       this.isResults = true;
+
   	});
   }
 
