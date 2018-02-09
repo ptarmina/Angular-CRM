@@ -2,7 +2,12 @@
 
 ## Live Demo
 
-Main entry point [CRM](http://crm.tarmina.com/).
+Main entry point [CRM](http://crm.tarmina.com/)
+Deep links:
+* [Dashboard](http://crm.tarmina.com/#/dash-board)
+* [Contacts](http://crm.tarmina.com/#/contacts)
+* [Detail / Edit](http://crm.tarmina.com/#/edit-contact/8037691)
+* [Add Contact](http://crm.tarmina.com/#/add-contact) -> currently disabled
 
 ## 3rd party Dependencies:
 
