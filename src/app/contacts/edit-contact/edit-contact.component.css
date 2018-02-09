@@ -18,13 +18,13 @@ mat-card-header .mdc-typography--title{
 
 }
 .title .mdc-typography--title{
-  text-align: center;
+
   font-weight: 600;
   font-size: 1.25em;
   margin-bottom: 0px;
 }
 .address{
-  text-align: center;
+
 }
 .item-value{
   color: #4d4842;
@@ -34,7 +34,20 @@ mat-card-header .mdc-typography--title{
   font-size: 1em;
 }
 .mdc-fab-delete-btn {
-  background-color: red;
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  background-color: #d51313;
   width: 30px;
   height: 30px;
+  z-index: 999;
+}
+.mdc-fab-edit-btn {
+  position: absolute;
+  right: 10px;
+
+  background-color: #8b9756;
+  width: 30px;
+  height: 30px;
+  z-index: 999;
 }

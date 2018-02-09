@@ -7,6 +7,7 @@ import { AddContactComponent } from './contacts/add-contact/add-contact.componen
 import { EditContactComponent } from './contacts/edit-contact/edit-contact.component';
 import { ContactTableComponent } from './contacts/contact-table/contact-table.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
+import { ContactContainerComponent } from './contacts/contact-container/contact-container.component';
 
 const routes: Routes = [
   {
@@ -20,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'contacts',
-    component: ContactListComponent
+    component: ContactContainerComponent
   },
   {
     path: 'contact-detail/:id',

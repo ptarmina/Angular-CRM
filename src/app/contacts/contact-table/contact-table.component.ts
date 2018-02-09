@@ -26,6 +26,7 @@ export class ContactTableComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
   ngOnInit() {
+
     this.api.get('ptarmina')
     .subscribe ( data => {
       this.dataSource.data = this.utility.cleanData(data);

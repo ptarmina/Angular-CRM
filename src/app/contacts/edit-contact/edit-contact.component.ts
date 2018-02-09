@@ -43,11 +43,20 @@ goBack(){
 }
 
 deleteMe(){
+    console.log("diabled due to api issues")
+    /*
     this.api.delete('ptarmina/'+this.contactId)
     .subscribe(data => {
       this.goBack()
    });
+   */
 }
+
+editMe(){
+      console.log("future enhancment")
+}
+
+
 
 
 }

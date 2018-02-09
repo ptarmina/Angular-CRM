@@ -1,15 +1,4 @@
-<app-add-button ></app-add-button>
-<!--<app-back-button ></app-back-button>-->
-
-<app-common-header *ngIf="isResults" ></app-common-header>
-<div *ngIf="isResults">
-<div  fxHide fxShow.xs="true">
-	<app-contact
-	    *ngFor = "let contactItem of (contactItems ? contactItems : [])"
-	    [contactItem] = "contactItem"
-	></app-contact>
-</div>
-</div>
-<div fxShow fxHide.lt-sm="true">
-	<app-contact-table></app-contact-table>
-</div>
+<app-contact
+    *ngFor = "let contactItem of (contactItems ? contactItems : [])"
+    [contactItem] = "contactItem"
+></app-contact>

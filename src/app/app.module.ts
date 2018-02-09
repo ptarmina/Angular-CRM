@@ -31,6 +31,7 @@ import { MdcTextFieldModule } from '@angular-mdc/web';
 import { CommonHeaderComponent } from './common-header/common-header.component';
 import { AddButtonComponent } from './add-button/add-button.component';
 import { BackButtonComponent } from './back-button/back-button.component';
+import { ContactContainerComponent } from './contacts/contact-container/contact-container.component';
 
 
 
@@ -47,6 +48,7 @@ import { BackButtonComponent } from './back-button/back-button.component';
     CommonHeaderComponent,
     AddButtonComponent,
     BackButtonComponent,
+    ContactContainerComponent,
   ],
   imports: [
     BrowserModule,

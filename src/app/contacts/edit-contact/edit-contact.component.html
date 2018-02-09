@@ -1,3 +1,4 @@
+<app-back-button ></app-back-button>
 <app-common-header></app-common-header>
 
 <div *ngIf="contactItem">
@@ -8,6 +9,10 @@
 <button mdc-fab class="mdc-fab-delete-btn" [mini]="false" [mdc-elevation]="12" (click)= deleteMe()>
   <mdc-icon [fontSize]="20" >delete</mdc-icon>
 </button>
+<button mdc-fab class="mdc-fab-edit-btn" [mini]="false" [mdc-elevation]="12" (click)= editMe()>
+  <mdc-icon [fontSize]="20" >edit</mdc-icon>
+</button>
+<div class="tool-bg-right edit"></div>
 </div>
     <mat-card-title mdc-typography-title >{{contactItem.Contacts[0].firstname}} {{contactItem.Contacts[0].LastName}}</mat-card-title>
     <mat-card-subtitle mdc-typography-body1 >{{contactItem.Contacts[0].title}}</mat-card-subtitle>
