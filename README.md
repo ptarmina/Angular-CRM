@@ -1,5 +1,28 @@
 # Telenotes
 
+## Live Demo
+
+Main entry point [CRM](http://crm.tarmina.com/).
+
+## 3rd party Dependencies:
+
+* @angular-mdc/web: ^0.7.4
+* @angular/flex-layout: ^2.0.0-beta.12
+* @angular/material: 5.0.0
+* ag-grid-angular: ^16.0.0
+* bootstrap: ^4.0.0-alpha.6"
+* hammerjs: ^2.0.8
+* material-components-web: ^0.28.0
+
+
+## Known issues:
+
+* Due to api issues, all funtionality related to PUT, POST, DELETE have been removed. v: 2-1-0 alpha.
+The api has been throwing this error:
+Failed to load http://devapp.telenotes.com/api/data/ptarmina: Response for preflight has invalid HTTP status code 500.
+
+## Angular CLI
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
 ## Development server
