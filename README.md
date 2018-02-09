@@ -19,10 +19,14 @@ Deep links:
 * hammerjs: ^2.0.8
 * material-components-web: ^0.28.0
 
+## Future enhancements:
+* Add filtering / search to both Contacts views ( table / list)
+* Enable edit / add / delete as api issues resolve
+* Image upload
 
 ## Known issues:
 
-* Due to api issues, all funtionality related to PUT, POST, DELETE have been removed. v: 2-1-0 alpha.
+* Due to api issues, all funtionality related to PUT, POST, DELETE have been disabled. v: 2-1-0 alpha.
 The api has been throwing this error:
 Failed to load http://devapp.telenotes.com/api/data/ptarmina: Response for preflight has invalid HTTP status code 500.
 
