@@ -13,14 +13,12 @@ export class ContactContainerComponent implements OnInit {
   isResults = false;
 
   constructor( public api: ApiService ) { }
-
+1
   ngOnInit() {
 
   	this.api.get('/ptarmina')
-  	.subscribe ( data => {
-
+  	.subscribe ( data => {[[[[[[[[[[[[[]]]]]]]]]]]]]
       this.isResults = true;
-
   	});
 
 

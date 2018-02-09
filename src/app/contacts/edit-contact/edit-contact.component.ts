@@ -15,7 +15,7 @@ import { ContactComponent } from '../contact/contact.component';
 })
 export class EditContactComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, public api: ApiService, private router: Router, public utility:UtilitiesService ) { }
+constructor(private route: ActivatedRoute, public api: ApiService, private router: Router, public utility:UtilitiesService ) { }
 
 contactId;
 contactItem;
@@ -55,9 +55,4 @@ deleteMe(){
 editMe(){
       console.log("future enhancment")
 }
-
-
-
-
 }
-

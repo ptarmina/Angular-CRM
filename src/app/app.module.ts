@@ -24,9 +24,9 @@ import { MdcButtonModule, MdcFabModule} from '@angular-mdc/web';
 import { MdcElevationModule } from '@angular-mdc/web';
 import { MdcThemeModule } from '@angular-mdc/web';
 import { MdcListModule } from '@angular-mdc/web';
-import { MdcMenuModule } from '@angular-mdc/web';
+//import { MdcMenuModule } from '@angular-mdc/web';
 import { MdcTypographyModule } from '@angular-mdc/web';
-import { MdcTextFieldModule } from '@angular-mdc/web';
+//import { MdcTextFieldModule } from '@angular-mdc/web';
 
 import { CommonHeaderComponent } from './common-header/common-header.component';
 import { AddButtonComponent } from './add-button/add-button.component';
@@ -66,8 +66,8 @@ import { ContactContainerComponent } from './contacts/contact-container/contact-
     MdcThemeModule,
     MdcListModule,
     MdcTypographyModule,
-    MdcMenuModule,
-    MdcTextFieldModule
+    //MdcMenuModule,
+    //MdcTextFieldModule
 
   ],
   providers: [

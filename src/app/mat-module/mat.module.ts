@@ -3,12 +3,9 @@ import { CommonModule } from '@angular/common';
 import {
 				MatCardModule,
 				MatExpansionModule,
-				//MatTableDataSource,
 				MatTableModule,
         MatListModule,
-        //MatFormFieldModule,
-        //MatFormField,
-        //MatFormFieldControl
+        MatSortModule
 				} from '@angular/material';
 
 import {MatInputModule} from '@angular/material/input';
@@ -23,14 +20,12 @@ import { CdkTableModule } from '@angular/cdk/table';
   	CommonModule,
   	MatCardModule,
   	MatExpansionModule,
-  	//MatTableDataSource,
+
   	MatTableModule,
     MatListModule,
     MatInputModule,
     MatFormFieldModule,
-    //MatFormFieldControl
-    //MatFormFieldModule,
-    //MatFormField,
+    MatSortModule,
 
   	CdkTableModule
 	],
@@ -38,14 +33,12 @@ import { CdkTableModule } from '@angular/cdk/table';
   [
   	MatCardModule,
   	MatExpansionModule,
-  	//MatTableDataSource,
   	MatTableModule,
     MatListModule,
     MatInputModule,
     MatFormFieldModule,
-    //MatFormFieldModule,
-   // MatFormFieldControl,
-    //MatFormField,
+    MatSortModule,
+    MatSortModule,
   	CdkTableModule
 	],
 

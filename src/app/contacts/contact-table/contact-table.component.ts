@@ -17,7 +17,7 @@ export class ContactTableComponent implements OnInit {
 
   constructor( public api: ApiService, private router:Router, public utility:UtilitiesService  ) { }
 
-  displayedColumns = ['CompanyName','Name', 'Button'];
+  displayedColumns = ['CompanyName','Name','Created', 'Button'];
   dataSource = new MatTableDataSource();
 
   resultsLength = 0;

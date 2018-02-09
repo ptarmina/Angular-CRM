@@ -12,7 +12,7 @@ import { ContactContainerComponent } from './contacts/contact-container/contact-
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/dash-board',
+    redirectTo: 'dash-board',
     pathMatch: 'full'
   },
   {
@@ -38,11 +38,19 @@ const routes: Routes = [
   {
     path: 'contact-table',
     component: ContactTableComponent
+  },
+  {
+     path: '**',
+     redirectTo: '/'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+
+  imports: [
+    RouterModule.forRoot(routes, { useHash: true })  // .../#/crisis-center/
+    //RouterModule.forRoot(routes)
+    ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -13,16 +13,11 @@ export class ApiService {
   data;
 
   get(url:string){
-  	//return this.request(url, RequestMethod.Get);
-
     if(this.data){
-      console.log("Stored data");
       return this.data
     }else{
-      console.log("New data");
       return this.getIt(url);
     }
-
   }
   getIt(url:string){
     this.data = this.request(url, RequestMethod.Get);

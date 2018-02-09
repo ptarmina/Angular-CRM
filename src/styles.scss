@@ -55,3 +55,8 @@ $mdc-theme-background: #fff;
     background-color: #b8bfc3;
     opacity: .7;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
