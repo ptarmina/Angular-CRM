@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +13,7 @@ import { ContactListComponent } from './contacts/contact-list/contact-list.compo
 import { AddContactComponent } from './contacts/add-contact/add-contact.component';
 import { ApiService } from './shared/api.service'
 import { UtilitiesService } from './shared/utilities.service'
+import { ContactService } from './shared/contact.service'
 
 import { ContactTableComponent } from './contacts/contact-table/contact-table.component';
 import { EditContactComponent } from './contacts/edit-contact/edit-contact.component';
@@ -32,6 +34,8 @@ import { CommonHeaderComponent } from './common-header/common-header.component';
 import { AddButtonComponent } from './add-button/add-button.component';
 import { BackButtonComponent } from './back-button/back-button.component';
 import { ContactContainerComponent } from './contacts/contact-container/contact-container.component';
+import { ContactRowsComponent } from './contacts/contact-rows/contact-rows.component';
+import { ContactRowComponent } from './contacts/contact-row/contact-row.component';
 
 
 
@@ -49,6 +53,8 @@ import { ContactContainerComponent } from './contacts/contact-container/contact-
     AddButtonComponent,
     BackButtonComponent,
     ContactContainerComponent,
+    ContactRowsComponent,
+    ContactRowComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +63,7 @@ import { ContactContainerComponent } from './contacts/contact-container/contact-
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    HttpClientModule,
     AppRoutingModule,
     MatModule,
     FlexLayoutModule,
@@ -72,6 +79,7 @@ import { ContactContainerComponent } from './contacts/contact-container/contact-
   ],
   providers: [
     ApiService,
+    ContactService,
     UtilitiesService
   ],
   bootstrap: [

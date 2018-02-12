@@ -10,7 +10,6 @@ export class UtilitiesService {
     for (var i=obj.length;i--;){
 
       if (obj[i]===null) {
-        //console.log(obj[i])
         obj.splice(i,1)
       };
     }
@@ -21,6 +20,7 @@ export class UtilitiesService {
 		obj = this.cleanData(obj);
 	  for (var value of obj) {
 	    if(value.CompanyID == id){
+          obj = null;
 	        return value
 	    };
 	  }

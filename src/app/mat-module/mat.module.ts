@@ -11,7 +11,7 @@ import {
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field'
 import { CdkTableModule } from '@angular/cdk/table';
-
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
 
@@ -26,6 +26,7 @@ import { CdkTableModule } from '@angular/cdk/table';
     MatInputModule,
     MatFormFieldModule,
     MatSortModule,
+    MatGridListModule,
 
   	CdkTableModule
 	],
@@ -39,6 +40,7 @@ import { CdkTableModule } from '@angular/cdk/table';
     MatFormFieldModule,
     MatSortModule,
     MatSortModule,
+    MatGridListModule,
   	CdkTableModule
 	],
 

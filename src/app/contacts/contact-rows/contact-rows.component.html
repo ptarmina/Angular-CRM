@@ -1,0 +1,24 @@
+<div class="header container-fluid">
+  <div class="row">
+    <div class="col-sm">
+    	Company
+    </div>
+
+    <div class="col-sm">
+    	Name
+    </div>
+
+    <div class="col-sm">
+    	Creaed Date
+    </div>
+
+    <div class="col-sm">
+    	Detail
+    </div>
+
+  </div>
+</div>
+<app-contact-row
+    *ngFor = "let contact of contacts | async"
+    [contact] = "contact"
+></app-contact-row>

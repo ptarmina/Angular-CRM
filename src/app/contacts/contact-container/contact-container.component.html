@@ -1,10 +1,16 @@
 <app-add-button ></app-add-button>
 <app-common-header></app-common-header>
 
-<div fxShow fxHide.lt-sm="true">
-<app-contact-table ></app-contact-table>
+<div fxShow fxHide.xs="true">
+<app-contact-rows ></app-contact-rows>
 </div>
 
 <div  fxHide fxShow.xs="true">
-<app-contact-list></app-contact-list>
+	<app-contact-list></app-contact-list>
 </div>
+
+<!--
+<div fxShow fxHide.xs="true">
+<app-contact-table ></app-contact-table>
+</div>
+-->

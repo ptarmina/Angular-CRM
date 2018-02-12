@@ -10,17 +10,23 @@ import { UtilitiesService } from '../../shared/utilities.service'
 })
 export class ContactContainerComponent implements OnInit {
 
-  isResults = false;
+  isResults = true;
+
+  contacts;
 
   constructor( public api: ApiService ) { }
-1
+
   ngOnInit() {
 
-  	this.api.get('/ptarmina')
-  	.subscribe ( data => {[[[[[[[[[[[[[]]]]]]]]]]]]]
+  	//this.api.get('/ptarmina')
+    /*
+  	.subscribe ( data => {
+      this.contacts = data;
       this.isResults = true;
-  	});
+      console.log(this.contacts)
 
+  	});
+*/
 
   }
 

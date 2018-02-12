@@ -11,17 +11,9 @@ export class ApiService {
   constructor(private http: Http) { }
 
   data;
-
   get(url:string){
-    if(this.data){
-      return this.data
-    }else{
-      return this.getIt(url);
-    }
-  }
-  getIt(url:string){
-    this.data = this.request(url, RequestMethod.Get);
-    return  this.data;
+    console.log("get")
+    return this.request(url, RequestMethod.Get);
   }
 
   post(url:string, body:Object){

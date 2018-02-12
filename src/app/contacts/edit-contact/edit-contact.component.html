@@ -4,7 +4,7 @@
 <div *ngIf="contactItem">
 <mat-card class="example-card" >
 
-  <mat-card-header>
+<mat-card-header>
 <div class="flex-container">
 <button mdc-fab class="mdc-fab-delete-btn" [mini]="false" [mdc-elevation]="12" (click)= deleteMe()>
   <mdc-icon [fontSize]="20" >delete</mdc-icon>
@@ -22,118 +22,78 @@
     <div class="address">{{contactItem.StreetAddress}} {{contactItem.City}} {{contactItem.State}} {{contactItem.ZipCode}}</div>
   </mat-card-content>
 </mat-card>
+
 <mat-card>
     <mat-card-title mdc-typography-title >
-        <mat-card>
+
         <span class="item-name">Name:</span>
         <span class=" item-value"><strong>{{contactItem.Contacts[0].firstname}} {{contactItem.Contacts[0].LastName}}</strong></span>
-    </mat-card>
+
     </mat-card-title>
 </mat-card>
 <mat-card>
     <mat-card-title mdc-typography-title >
-    <mat-card>
+
         <span class="item-name">Address:</span>
         <span class=" item-value"><strong>{{contactItem.Contacts[0].ContactAddress}}</strong></span>
-    </mat-card>
+
     </mat-card-title>
 </mat-card>
 <mat-card>
     <mat-card-title mdc-typography-title >
-    <mat-card>
+
         <span class="item-name">City:</span>
         <span class=" item-value"><strong>{{contactItem.Contacts[0].ContactCity}}</strong></span>
-    </mat-card>
+
     </mat-card-title>
 </mat-card>
 <mat-card>
     <mat-card-title mdc-typography-title >
-    <mat-card>
+
         <span class="item-name">State:</span>
         <span class=" item-value"><strong>{{contactItem.Contacts[0].ContactState}}</strong></span>
-    </mat-card>
+
     </mat-card-title>
 </mat-card>
 <mat-card>
     <mat-card-title mdc-typography-title >
-    <mat-card>
+
         <span class="item-name">Zip:</span>
         <span class=" item-value"><strong>{{contactItem.Contacts[0].ContactZip}}</strong></span>
-    </mat-card>
+
     </mat-card-title>
 </mat-card>
 <mat-card>
     <mat-card-title mdc-typography-title >
-    <mat-card>
+
         <span class="item-name">Email:</span>
         <span class=" item-value"><strong>{{contactItem.Contacts[0].email}}</strong></span>
-    </mat-card>
+
     </mat-card-title>
 </mat-card>
 <mat-card>
     <mat-card-title mdc-typography-title >
-    <mat-card>
+
         <span class="item-name">Primary Phone:</span>
         <span class=" item-value"><strong>{{contactItem.Contacts[0].PrimaryPhone}}</strong></span>
-    </mat-card>
+
     </mat-card-title>
 </mat-card>
 <mat-card>
     <mat-card-title mdc-typography-title >
-    <mat-card>
+
         <span class="item-name">Mobile Phone:</span>
         <span class=" item-value"><strong>{{contactItem.Contacts[0].MobilePhone}}</strong></span>
-    </mat-card>
+
     </mat-card-title>
 </mat-card>
 <mat-card>
     <mat-card-title mdc-typography-title >
-    <mat-card>
+
         <span class="item-name">Birthday:</span>
         <span class=" item-value"><strong>{{contactItem.Contacts[0].birthday}}</strong></span>
-    </mat-card>
+
     </mat-card-title>
 </mat-card>
 </div>
 
-
-
-<!--
-
-				"CompanyID": 8037691,
-        "AccountId": "0",
-        "CompanyName": "NEW A&S Supply",
-        "StreetAddress": "583 School Street",
-        "StreetAddress2": "",
-        "City": "West New York",
-        "State": "NJ",
-        "Country": "",
-        "ZipCode": "07093",
-        "webSite": "",
-        "CreatedDate": "2015-12-10T08:43:57.313",
-        "Contacts[0]": [
-            {
-                "ContactId": 603180604,
-                "title": "President",
-                "firstname": "Jim",
-                "LastName": "Heady",
-                "ContactCity": "West New York",
-                "Contacts[0]tate": "NJ",
-                "ContactZip": "07093",
-                "PrimaryPhone": "642-584-7436",
-                "ext": "",
-                "MobilePhone": "",
-                "fax": "",
-                "email": "Jim@MyCompany.com",
-                "ContactAddress": "583 School Street",
-                "Contactaddress2": "",
-                "HomePhone": "",
-                "email2": "",
-                "dept": "",
-                "birthday": "Jan  1 1900 12:00AM"
-            }
-        ],
-        "status": "Not Defined",
-        "Type": "Miscellaneous"
-
-	-->

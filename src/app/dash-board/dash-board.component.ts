@@ -9,14 +9,9 @@ import { ApiService } from '../shared/api.service'
 export class DashBoardComponent implements OnInit {
 
   constructor( public api: ApiService ) { }
-  isResults = false;
+  isResults = true;
 
   ngOnInit() {
 
-  	this.api.get('/ptarmina')
-  	.subscribe ( data => {
-      this.isResults = true;
-  	});
   }
-
 }

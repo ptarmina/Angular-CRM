@@ -11,12 +11,12 @@ import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-contact-list',
-  templateUrl: './contact-list.component.html',
-  styleUrls: ['./contact-list.component.css']
+  selector: 'app-contact-rows',
+  templateUrl: './contact-rows.component.html',
+  styleUrls: ['./contact-rows.component.css']
 })
-export class ContactListComponent implements OnInit {
-  contacts: Observable<Contact[]>;
+export class ContactRowsComponent implements OnInit {
+	contacts: Observable<Contact[]>;
   isResults = false;
 
 	constructor( public contactService: ContactService, public utility:UtilitiesService ) { }

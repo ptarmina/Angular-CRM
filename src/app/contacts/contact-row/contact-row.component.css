@@ -1,0 +1,18 @@
+.table{
+	margin: 0px;
+
+}
+.table .row {
+	background-color: #fff;
+	padding: 10px 0px;
+	border-bottom: 1px solid #ccc;
+}
+.table .col-sm{
+
+}
+.mdc-fab-detail{
+  background-color: #5d7a9a;
+  width: 30px;
+  height: 30px;
+  z-index: 999;
+}

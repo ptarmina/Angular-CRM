@@ -10,14 +10,14 @@ card-title {
   margin-bottom: 8px;
   font-weight: 600;
 }
-mat-card-header .mdc-typography--title{
+mat-card-header .mdc-typography-title{
   font-size: 1.6em;
 }
 .mat-card-header-text {
     margin: 0 0px;
 
 }
-.title .mdc-typography--title{
+.title .mdc-typography-title{
 
   font-weight: 600;
   font-size: 1.25em;

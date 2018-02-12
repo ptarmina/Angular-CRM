@@ -1,4 +1,4 @@
 <app-contact
-    *ngFor = "let contactItem of (contactItems ? contactItems : [])"
-    [contactItem] = "contactItem"
+    *ngFor = "let contact of contacts | async"
+    [contact] = "contact"
 ></app-contact>

@@ -1,0 +1,18 @@
+<div class="table container-fluid">
+  <div class="row">
+    <div class="col-sm">
+      {{contact.CompanyName}}
+    </div>
+    <div class="col-sm">
+      {{contact.Contacts[0].firstname}} {{contact.Contacts[0].LastName}}
+    </div>
+    <div class="col-sm">
+    	{{contact.CreatedDate | date}}
+    </div>
+    <div class="col-sm">
+        <button mdc-fab class="mdc-fab-detail"  *ngIf="contact.CompanyID" (click)="getDetail(contact.CompanyID)">
+        <mdc-icon [fontSize]="24" >info</mdc-icon>
+      </button>
+    </div>
+  </div>
+</div>

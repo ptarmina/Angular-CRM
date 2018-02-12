@@ -61,10 +61,6 @@
     box-sizing: border-box;
     background-color: #fff;
 }
-<style>…</style>
-.mat-header-row {
-    min-height: 56px;
-}
 .mat-header-row, .mat-row {
     border-bottom-color: rgba(0,0,0,.12);
 }
